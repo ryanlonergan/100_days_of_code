@@ -1,0 +1,36 @@
+/* https://colorhunt.co/palette/258333 the palette I used */
+
+body {
+  background-color: #f7f6e7;
+  color: #314e52;
+}
+
+hr {
+  border-color: #f2a154;
+  border-style: solid none none;
+  border-width: 2px;
+  height: 0;
+  width: 95%;
+}
+
+h1 {
+  color: #314e52;
+}
+
+h3 {
+  color: #314e52;
+}
+
+/* I didn't add these in, but important note is that ID can only be used once,
+while class can be used multiple times - unique id vs a name
+Also, elements can have multiple classes, but 1 ID */
+/****Tag Selectors***/
+
+/****Class Selectors***/
+/* .name {} */
+
+/****Sudo-Class Selectors***/
+/* name:hover or something similar {} */
+
+/****ID Selectors***/
+/* #name {} */
