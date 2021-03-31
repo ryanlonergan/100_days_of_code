@@ -4,7 +4,7 @@
 
 <tr>
   <td>
-    This project created a very simple personal website that recreates the style that some popular CS professors use, for example <a href='https://www.cs.dartmouth.edu/~thc/'>Thomas Cormen</a>. It mainly aimed to introduce people unfamiliar with web development to HTML and CSS before introducing libraries that need some prior knowledge, such as Beautiful Soup and Flask. The lesson actually came from <a href='https://www.udemy.com/course/the-complete-web-development-bootcamp/'>Angela's web development course</a> which may be interesting to check out later on. Overall, an easy day without much to talk about.
+    This project created a very simple personal website that recreates the style that some popular CS professors use, for example <a href='https://www.cs.dartmouth.edu/~thc/'>Thomas Cormen</a>. It mainly aimed to introduce people unfamiliar with web development to HTML and CSS before introducing libraries that need some prior knowledge, such as Beautiful Soup and Flask. The lesson actually came from <a href='https://www.udemy.com/course/the-complete-web-development-bootcamp/'>Angela's web development course</a> which may be interesting to check out later on.
   </td>
   <td>
     <div>
@@ -30,3 +30,6 @@
 </tr>
 
 </table>
+
+Overall, an easy day without much to talk about.
+  
