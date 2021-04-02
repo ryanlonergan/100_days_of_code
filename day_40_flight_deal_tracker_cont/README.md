@@ -3,7 +3,7 @@
 <table border='0'>
 <tr>
   <td>
-  This project project is a continuation from the previous day and adds some additional functionality. The key difference is that instead of sending a text, it sends an email to a list of users. People can signup with a public facing <a href="https://www.replit.com">Replit</a> and Sheety manages the email list on Google Sheets. If a flight is found, it emails all users the deal and provides a direct link to book the trip on Google Flights. There also is additional error handling and the program will now check for flights with layovers if there are limited flights due to Covid. 
+  This project is a continuation from the previous day and adds some additional functionality. The key difference is that instead of sending a text, it sends an email to a list of users. People can signup with a public facing <a href="https://www.replit.com">Replit</a> and Sheety manages the email list on Google Sheets. If a flight is found, it emails all users the deal and provides a direct link to book the trip on Google Flights. There also is additional error handling and the program will now check for flights with layovers if there are limited flights due to Covid. 
   </td>
   <td>
     <div>
