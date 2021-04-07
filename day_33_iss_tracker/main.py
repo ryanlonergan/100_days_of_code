@@ -71,4 +71,4 @@ while True:
         else:
             print('The ISS is overhead, but it is not dark.')
     else:
-        print('The ISS is not overhead')
+        print('The ISS is not overhead')  # left in these print statements for troubleshooting, otherwise no output
