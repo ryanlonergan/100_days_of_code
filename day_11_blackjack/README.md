@@ -33,4 +33,4 @@ This day was the first capstone for the course where instructions were more limi
 
 One note is that the project originally uses a clear function from the Replit library, but it does not really work outside their environment. I wanted to replace it with something else, but the correct way to do so differs by operating system. To get around this, I could have used some specific conditions that quickly got complex, but elected for the simpler option of printing a new line 100 times. 
 
-<a href="https://replit.com/@ryanlonergan/blackjack-startl">Click here</a> to view and play the project on Replit.
+<a href="https://replit.com/@ryanlonergan/blackjack-start">Click here</a> to view and play the project on Replit.
