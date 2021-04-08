@@ -32,4 +32,4 @@
 
 Again, not an overly interesting day. Pacing is way off still in terms of time and difficulty with a large amount of time needed for very small challenges. Howeever, it is building the foundation of CSS which will be needed later on which is something I keep on telling myself so I have more patience. Still, I am not looking forward to the almost 3 hours of videos to watch tomorrow which is still a huge time sink when I watch in double speed. Only 1 more day of this though...
 
-<a href="https://ryanlonergan.github.io/portfolio/100_days/day_43_css_resume.html" target="_blank">Here is a link on my personal website showing how the project looks.</a>
+<a href="https://ryanlonergan.github.io/portfolio/100_days/day_43_css_resume.html">Click here</a> to view the page on my personal website to see how the project looks.
