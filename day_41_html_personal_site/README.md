@@ -31,5 +31,5 @@
 
 </table>
 
-Overall, an easy day without much to talk about.
+Overall, an easy day without much to talk about. I accidently deleted my project for the day when moving my folders around, so I just quickly remade the page and the following days for HTML/CSS return more to what the course wanted.
   
