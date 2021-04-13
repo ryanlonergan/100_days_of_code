@@ -32,10 +32,6 @@
 
 I really enjoyed this project and decided to upload it even though it was just an exercise and not the main project from the day. I am guessing that the api was made because Kanye West sounds like kanye.rest and if that isn't a good enough reason to make a REST api, I don't know what is. While it may be a joke api, it provides an entertaining way to learn how to make requests and hopefully you like it as much as I do.
 
-![Screenshot](./kanye_quotes.png)
+![Screenshot](https://ryanlonergan.github.io/assets/img/100_days/day_33_kanye_quotes.png)
 
-
-
-
-
-
+<img src="https://ryanlonergan.github.io/assets/img/100_days/day_33_kanye_quotes.png" alt="GUI Screenshot">
