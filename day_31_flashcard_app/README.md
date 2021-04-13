@@ -31,11 +31,6 @@
 
 I thought this project was fairly well designed and helped to better my understanding of how to create timers with Tkinter through the `Tk.after()` class method. It was somewhat difficult to use at first, especially with where to place it within the program's functions, but after reading the documentation and searching online, I was able to figure it out and was satisfied with its functionality. I also thought that reading from a csv was a great idea as it makes the program easily expandable if a user wants to learn new vocabulary. There also is room for improvement and making use of OOP may allow for better handling of new lists of words and possibly multiple lists at once, but I am happy with the project in its current state.
 
-
-<img src="https://ryanlonergan.github.io/assets/img/100_days/day_31_card_front.png" alt="Flashcard Front" width=350>
-<img src="https://ryanlonergan.github.io/assets/img/100_days/day_31_card_back.png" alt="Flashcard Back" width=350>
-
-
 <table>
   <td>
   <img src="https://ryanlonergan.github.io/assets/img/100_days/day_31_card_front.png" alt="Flashcard Front">
@@ -44,3 +39,5 @@ I thought this project was fairly well designed and helped to better my understa
   <img src="https://ryanlonergan.github.io/assets/img/100_days/day_31_card_back.png" alt="Flashcard Back">
   </td>
 </table>
+
+<em>Note - I really wish I could get rid of the lines in tables with GitHub MD, but I'm stuck with them. However, if you know how, please reach out and let me know.</em>
