@@ -3,7 +3,7 @@
 <table border='0'>
 <tr>
   <td>
-  This page is a template to copy and paste for each day. I don't like the table borders, but they are controlled by github. It looks pretty clean, so oh well.
+  This project creates a GUI flashcard app that allows the user to provide feedback and also creates dynamic lists to focus studying. The GUI is made in Tkinter and is very simple with separate color schemes for the front and back of the flashcards that flips automatically after a few seconds. The user then either checks if they knew the vocabulary word or not, and if they do, it is removed from a csv list that the project manages. The project currently asks about French words, but can be changed to whatever the user wishes to study, from other languages to school subjects.
   </td>
   <td>
     <div>
@@ -13,7 +13,7 @@
         </tr>
         <tr>
           <td>Difficulty</td>
-          <td align='center'>4/5</td>
+          <td align='center'>3/5</td>
         </tr>
         <tr>
           <td>Frustration</td>
@@ -21,7 +21,7 @@
         </tr>
         <tr>
           <td>Key Concepts</td>
-          <td align='center'><em>GUI, tkinter, Timers</em></td>
+          <td align='center'><em>GUI, Tkinter, Timers</em></td>
         </tr>
       </table>
     </div>
@@ -29,5 +29,18 @@
 </tr>
 </table>
 
+I thought this project was fairly well designed and helped to better my understanding of how to create timers with Tkinter through the `Tk.after()` class method. It was somewhat difficult to use at first, especially with where to place it within the program's functions, but after reading the documentation and searching online, I was able to figure it out and was satisfied with its functionality. I also thought that reading from a csv was a great idea as it makes the program easily expandable if a user wants to learn new vocabulary. There also is room for improvement and making use of OOP may allow for better handling of new lists of words and possibly multiple lists at once, but I am happy with the project in its current state.
 
-Any comments for the day.
+
+<img src="https://ryanlonergan.github.io/assets/img/100_days/day_31_card_front.png" alt="Flashcard Front" width=350>
+<img src="https://ryanlonergan.github.io/assets/img/100_days/day_31_card_back.png" alt="Flashcard Back" width=350>
+
+
+<table>
+  <td>
+  <img src="https://ryanlonergan.github.io/assets/img/100_days/day_31_card_front.png" alt="Flashcard Front">
+  </td>
+  <td>
+  <img src="https://ryanlonergan.github.io/assets/img/100_days/day_31_card_back.png" alt="Flashcard Back">
+  </td>
+</table>
