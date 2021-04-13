@@ -49,4 +49,5 @@ for person in birthdays:
                                 to_addrs=my_email,  # replace to_addrs with person['email']
                                 msg=f'Subject:Happy Birthday, {person["name"]}!\n\n'
                                     f'{complete_letter}'.encode('utf-8'))
-        print('Script finished')
+
+print('Script finished')
