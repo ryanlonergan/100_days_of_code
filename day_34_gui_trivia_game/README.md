@@ -3,7 +3,7 @@
 <table border='0'>
 <tr>
   <td>
-  This page is a template to copy and paste for each day. I don't like the table borders, but they are controlled by github. It looks pretty clean, so oh well.
+  This project creates a GUI interface for a trivia game with dynamically updated questions through the <a href ="https://opentdb.com/api_config.php">Open Trivia Database API</a>. OOP is used to organize the program and its logic is divided by class to allow for easier changes, maintenance and troubleshooting. The questions are presented to the user through a UI made with <a href="https://docs.python.org/3/library/tkinter.html">Tkinter</a> and reacts to the user's answers to let them know if they were correct.
   </td>
   <td>
     <div>
@@ -29,5 +29,8 @@
 </tr>
 </table>
 
+This day was a bit of a trial as I am still getting used to OOP best practices and when to use them. If I were to code the project within only the `main.py` file, I would have completed the project much faster, but the project pushed me out of my comfort zone and I welcome the challenge. While it may be easier to stick with what I am used to, I do see the benefits of using OOP and different classes to organize the project as making changes was much easier as the project evolved. Improving my knowledge of OOP was one of the main reasons I wanted to do this course and I'm glad that I am becoming better at using it as the logic of when to use it makes more sense to me.
 
-Any comments for the day.
+For the questions, the <a href ="https://opentdb.com/api_config.php">Open Trivia Database API</a> was used to retrieve randomized questions. The API is vastly customizable and the difficulty, number of questions and category can be changed easily within the parameters inside the `data.py` file. If I were to add to the project, customizing these parameters every time could be easily done as the program is structured to allow for such changes through OOP.
+
+<img src="https://ryanlonergan.github.io/assets/img/100_days/day_34_trivia_game.png" alt="Screenshot of Trivia Game" width=275>
