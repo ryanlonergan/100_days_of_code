@@ -43,15 +43,15 @@ designed. Nevertheless, when I was able to get the code to run perfectly, it was
 lot more about troubleshooting.
 
 
-If you want to run the project yourself, you will need to make a `config.json` file needing the following variables:
+If you want to run the project yourself, you will need to make a `config.json` file with the following variables:
 
-    "tequila_api"
-    "sheety_endpoint"    
-    "sheety_bearer_token"
-    "twilio_account_sid"
-    "twilio_auth_token"
-    "twilio_phone_number"
-    "my_phone_number"
+    "tequila_api"  # Your API key for Tequila
+    "sheety_endpoint"  # The Sheety endpoint for your Google Sheets file with flight data
+    "sheety_bearer_token"  # Your Sheety bearer token
+    "twilio_account_sid"  # Your Twilio account ID
+    "twilio_auth_token"  # Your Twilio authentication token
+    "twilio_phone_number"  # Your Twilio account phone number
+    "my_phone_number"  # Your personal Twilio verified phone number
 
 The relevant APIs and their functions in the project are:
 - [Tequila - Flight Information](https://tequila.kiwi.com)

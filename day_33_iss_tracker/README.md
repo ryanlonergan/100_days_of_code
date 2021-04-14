@@ -36,7 +36,7 @@ I thought this project was a great way to introduce API calls and how to use mul
 However, this project was not without its challenges which mainly revolved around timezones. I think that the project was not designed to have this issue, but it was instead introduced by accident since they are based in London which is UTC +0. The Sunrise Sunset API returns values in UTC +0 time, so people living in different parts of the world need to make adjustments, which was not overly simple. I was able to develop a solution that should work no matter where you are, regardless of daylight savings time and also requires no changes from the user, but it took quite a lot of time looking around the [datetime module documentation](https://docs.python.org/3/library/datetime.html).
 
 
-If you want to run the project yourself, you will need to make a `config.json` file needing the following variables:
+If you want to run the project yourself, you will need to make a `config.json` file with the following variables:
 
     "email"  # Your email address
     "password"  # Your email password
