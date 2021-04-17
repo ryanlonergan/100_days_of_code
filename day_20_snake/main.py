@@ -15,6 +15,7 @@ snake = Snake()
 food = Food()
 scoreboard = Scoreboard()
 
+# Adding in controls - can use either arrow keys or `wasd`
 screen.listen()
 screen.onkey(snake.up, 'Up')
 screen.onkey(snake.down, 'Down')
@@ -29,7 +30,7 @@ screen.onkey(snake.right, 'd')
 game_is_on = True
 while game_is_on:
     screen.update()
-    time.sleep(0.1)
+    time.sleep(0.1)  # sets game speed
     snake.move()
 
     # Detect collision with food
