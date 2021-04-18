@@ -3,7 +3,7 @@
 <table border='0'>
 <tr>
   <td>
-  This page is a template to copy and paste for each day. I don't like the table borders, but they are controlled by github. It looks pretty clean, so oh well.
+  This project creates a Pomodoro timer to help with productivity using a GUI through <a href="https://docs.python.org/3/library/tkinter.html">tkinter</a>. It takes the duration for the work periods, short breaks and long breaks in seconds and uses floor division and other logic to format the countdown correctly using <code>.after()</code> to update the count. The program's logic is broken down into different functions and the UI updates itself to provide feedback based on the user's progress.
   </td>
   <td>
     <div>
@@ -29,5 +29,6 @@
 </tr>
 </table>
 
+I thought this day was a helpful introduction into setting and calling timed commands tied to certain events with `.after()`. It was somewhat of a challenge getting my head around how the event is called by the program, but once I did, it is fairly simple to setup and use. The program has some room for improvement as it is possible to set up multiple timers, but these can be fixed through disabling buttons if desired. While I may not use this program in my day to day life as I find Pomodoro too rigid, I am happy with how it came out overall. I just wish I could use `.after()` outside of tkinter after getting used to it, but I will have to look into alternatives for more general code.
 
-Any comments for the day.
+<img src="https://ryanlonergan.github.io/assets/img/100_days/day_28_pomodoro.png" alt="Project Screenshot" width=450>
