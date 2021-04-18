@@ -17,7 +17,7 @@ timer = None
 
 def reset_timer():
     """
-        Resets UI, global reps counter and any timers
+    Resets UI, global reps counter and any timers
     """
     window.after_cancel(timer)
     top_text.config(text='Timer', fg=GREEN)
