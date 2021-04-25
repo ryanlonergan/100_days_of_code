@@ -37,5 +37,12 @@ However, in general:
 - broke it up over several days
 - looked ahead and for the next week or so, the class should resume to how it used to be
 - html elements are positioned on top of their parents and are in effect, 2-d objects on a 3-d plane and their positioning is similar to how cel animation works.
+-
 
 <a href="https://ryanlonergan.github.io/portfolio/100_days/day_44_css_site.html">Click here</a> to view the page on my personal website to see how the project looks. <strong>Link Does Not Work Currently</strong>
+
+Helpful links:
+- https://www.flaticon.com/
+- [fonts](https://fonts.google.com/)
+- https://giphy.com/stickers/
+- https://colorhunt.co/
