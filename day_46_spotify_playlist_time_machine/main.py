@@ -3,6 +3,8 @@ from bs4 import BeautifulSoup
 import requests
 import json
 import spotipy
+import os
+# Todo Find out if I need this
 from spotipy.oauth2 import SpotifyClientCredentials
 
 # Can switch to an input to get custom dates, but I switch to a static date for testing
@@ -25,81 +27,60 @@ ranking = range(1, 101)  # I included a rank column as the index bothered me a b
 songs_df = pd.DataFrame(list(zip(ranking, song_list, artist_list)), columns=['Rank', 'Song', 'Artist'])
 # print(songs_df.to_string(index=False))  # prints the df without the index to avoid any confusion with rank
 
-
-# todo I think I will put this all in a separate script that runs if it doesn't find the token.txt file
-
-# Get Spotify OAuth from a .gitignore'd config file
-with open('config.json', 'r') as data_file:
-    config = json.load(data_file)
-    spotify_client_id = config['spotify_client_id']
-    spotify_client_secret = config['spotify_client_secret']
-url_redirect = 'https://example.com'
-
-auth = spotipy.oauth2.SpotifyOAuth(client_id=spotify_client_id,
-                                   client_secret=spotify_client_secret,
-                                   redirect_uri=url_redirect,
-                                   scope='playlist-modify-private')
-# cache_path='token.txt') no longer needed
-access_tok = auth.get_cached_token()  # .get_access_token() is being deprecated so I believe the token.txt is not needed
-bearer_token = access_tok['access_token']
-
-# todo
-'''
-format may look like this
-
+# todo move all of this to oauth script - doesn't need to be here - easier to sort out there
+# Gets bearer token through existing token.txt file or requests ones from Spotify if token.txt does not exist
+# if new token is needed, requires accepting app access via spotify and need to copy and paste redirect url int cmd line
 try:
-    with open config.json:
-        bearer_token
-    continue
-except missing
-    get token
-    recursion
-except failure
-    get token
-    recursion
-    
-Maybe it is better to not put it in a recursion loop - continues to fail indefinitely 
-come back to it tomorrow
+    with open('token.txt', 'r') as token_file:
+        token_data = token_file.read()
+        token_dict = json.loads(token_data)
+        bearer_token = token_dict['access_token']
+except FileNotFoundError:
+    # Get Spotify OAuth from a .gitignore'd config file
+    with open('config.json', 'r') as data_file:
+        config = json.load(data_file)
+        spotify_client_id = config['spotify_client_id']
+        spotify_client_secret = config['spotify_client_secret']
+    url_redirect = 'https://example.com'
 
-put in a counter that stops after 3 tries
-if count < 4:
- try
-else:
-print('something isn't right')
-break
+    auth = spotipy.oauth2.SpotifyOAuth(client_id=spotify_client_id,
+                                       client_secret=spotify_client_secret,
+                                       redirect_uri=url_redirect,
+                                       show_dialog=True,
+                                       scope='playlist-modify-private',
+                                       cache_path='token.txt')
 
-'''
-
-# with open('token.txt', 'r') as token_file:
-#     token_data = token_file.read()
-#     token_dict = json.loads(token_data)
-#     bearer_token = token_dict['access_token']
-#
-sp = spotipy.Spotify(auth=bearer_token)
-user_details = sp.current_user()
-print(user_details['id'])
+    # it sometimes says .get_access_token() is being deprecated, but not always, not sure what is going on with spotipy
+    access_tok = auth.get_access_token()
+    bearer_token = access_tok['access_token']
 
 
-# her code may want to try tomorrow
-'''
-import spotipy
-from spotipy.oauth2 import SpotifyOAuth
+# This section does a quick check to ensure that the recorded bearer token is still good
+# If it fails, it deletes the old token.txt file and requests it again
+# This action does require the user to copy and paste in their redirect url once they accept the app access from spotify
+try:
+    sp = spotipy.Spotify(auth=bearer_token)
+    user_details = sp.current_user()
+    print(sp.current_user()['id'])   # todo Figure out if this is needed later, do I need to call it again?
+except spotipy.client.SpotifyException:
+    os.remove('token.txt')
 
-sp = spotipy.Spotify(
-    auth_manager=SpotifyOAuth(
-        scope="playlist-modify-private",
-        redirect_uri="http://example.com",
-        client_id=YOUR UNIQUE CLIENT ID,
-        client_secret=YOUR UNIQUE CLIENT SECRET,
-        show_dialog=True,
-        cache_path="token.txt"
-    )
-)
-user_id = sp.current_user()["id"]
+    # Get Spotify OAuth from a .gitignore'd config file
+    with open('config.json', 'r') as data_file:
+        config = json.load(data_file)
+        spotify_client_id = config['spotify_client_id']
+        spotify_client_secret = config['spotify_client_secret']
+    url_redirect = 'https://example.com'
 
+    auth = spotipy.oauth2.SpotifyOAuth(client_id=spotify_client_id,
+                                       client_secret=spotify_client_secret,
+                                       redirect_uri=url_redirect,
+                                       show_dialog=True,
+                                       scope='playlist-modify-private',
+                                       cache_path='token.txt')
 
+    # it sometimes says .get_access_token() is being deprecated, but not always, not sure what is going on with spotipy
+    access_tok = auth.get_access_token()
+    bearer_token = access_tok['access_token']
 
-
-
-
-'''
+print('good')
