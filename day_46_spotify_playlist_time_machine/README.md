@@ -35,7 +35,8 @@ Any comments for the day.
 
 If you want to run the project yourself, you will need to make a `config.json` file with the following variables:
 
-    "variable"  # short description
+    "spotify_client_id"  # Personal ID for Spotify Developer App
+    "spotify_client_secret"  # Personal Token for Spotify Developer App
 
 The relevant APIs and their functions in the project are:
-- [Name](link)
+- [Spotipy - Interaction with Spotify Data](https://spotipy.readthedocs.io/en/2.18.0/)
