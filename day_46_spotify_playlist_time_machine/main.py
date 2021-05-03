@@ -3,11 +3,12 @@ import requests
 
 from bs4 import BeautifulSoup
 import pandas as pd
+import re
 import spotipy
 
 from oauth import *
 
-# Can switch to an input to get custom dates, but I switch to a static date for testing
+# Can switch to an input to get custom dates, but I used a static date for testing
 # May want to add some error checking to ensure date is in correct format though
 # date = input('Which date would you like a playlist for? Enter the date in this format: YYYY-MM-DD: ')
 date = '2020-03-23'
@@ -37,9 +38,29 @@ bearer_token = get_bearer()
 try:
     sp = spotipy.Spotify(auth=bearer_token)
     user_details = sp.current_user()
-    print(user_details['id'])  # todo Figure out if this is needed later, do I need to call it again?
+    # print(user_details['id'])  # Can use this line as a test
 except spotipy.client.SpotifyException:
-    os.remove('token.txt')
+    os.remove('token.txt')  # Deletes the file with the old or wrong authentication details
     bearer_token = get_oauth()
+    sp = spotipy.Spotify(auth=bearer_token)
+    user_details = sp.current_user()
+    # print(user_details['id'])  # Can use this line as a test
 
-print(bearer_token)
+# Search for the songs in the Billboard Top 100 for the date
+song_uris = []
+count = 0
+for ind, song in songs_df.iterrows():
+    # The search was particular about the artist name and any song with features or similar needed to be split
+    artist_name = re.split('Featuring|&| X | x | Duet ', song['Artist'])
+    result = sp.search(q=f"track:{song['Song']} artist:{artist_name[0]}", type='track')
+    try:
+        uri = result['tracks']['items'][0]['uri']
+        song_uris.append(uri)
+    except IndexError:
+        # print(song['Song'], song['Artist'])  # Use this line to figure out what tracks aren't being found
+        count += 1
+print(f'{count} songs not on spotify')  # Gives an idea of how many songs are not available or had issues
+
+# Playlist creation and adding songs
+playlist = sp.user_playlist_create(user=user_details['id'], name=f'{date} Billboard Top 100', public=False)
+sp.playlist_add_items(playlist_id=playlist['id'], items=song_uris)
