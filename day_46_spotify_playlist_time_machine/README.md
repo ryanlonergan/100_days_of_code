@@ -32,6 +32,11 @@
 
 Any comments for the day.
 
+problems with searching
+- before regex for artist names in searches - 33/100 missing
+- year in search term - 3/100 missing - just decided to exclude in case of 
+- fixing those allowed all to come through
+- her version used to just search for song title and year - not very accurate, but less problems 
 
 If you want to run the project yourself, you will need to make a `config.json` file with the following variables:
 
@@ -39,4 +44,4 @@ If you want to run the project yourself, you will need to make a `config.json` f
     "spotify_client_secret"  # Personal Token for Spotify Developer App
 
 The relevant APIs and their functions in the project are:
-- [Spotipy - Interaction with Spotify Data](https://spotipy.readthedocs.io/en/2.18.0/)
+- [Spotipy - Library for Interacting with Spotify](https://spotipy.readthedocs.io/en/latest/)
