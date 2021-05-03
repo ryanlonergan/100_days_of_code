@@ -10,8 +10,8 @@ from oauth import *
 
 # Can switch to an input to get custom dates, but I used a static date for testing
 # May want to add some error checking to ensure date is in correct format though
-# date = input('Which date would you like a playlist for? Enter the date in this format: YYYY-MM-DD: ')
-date = '2020-03-23'
+date = input('Which date would you like a playlist for? Enter the date in this format: YYYY-MM-DD: ')
+# date = '2020-03-23'  # can use this date or any date for testing
 url = 'https://www.billboard.com/charts/hot-100/' + date
 
 response = requests.get(url)
@@ -50,14 +50,18 @@ except spotipy.client.SpotifyException:
 song_uris = []
 count = 0
 for ind, song in songs_df.iterrows():
-    # The search was particular about the artist name and any song with features or similar needed to be split
+    # Added some extra processing of the strings to allow for more tracks to be found
+    song_name = re.split('\(', song['Song'])
+    song_name = song_name[0].replace("'", "")
+    # The search was very particular about the artist name and any song with features or similar needed to be split
     artist_name = re.split('Featuring|&| X | x | Duet ', song['Artist'])
-    result = sp.search(q=f"track:{song['Song']} artist:{artist_name[0]}", type='track')
+    artist_name = artist_name[0].replace("'", "")
+    result = sp.search(q=f"track:{song_name} artist:{artist_name}", type='track')
     try:
         uri = result['tracks']['items'][0]['uri']
         song_uris.append(uri)
     except IndexError:
-        # print(song['Song'], song['Artist'])  # Use this line to figure out what tracks aren't being found
+        print(f"{song['Song']} - {song['Artist']}")  # Use this line to figure out what tracks aren't being found
         count += 1
 print(f'{count} songs not on spotify')  # Gives an idea of how many songs are not available or had issues
 
