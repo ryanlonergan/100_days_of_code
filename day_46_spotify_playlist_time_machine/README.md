@@ -33,10 +33,22 @@
 Any comments for the day.
 
 problems with searching
+
 - before regex for artist names in searches - 33/100 missing
 - year in search term - 3/100 missing - just decided to exclude in case of 
 - fixing those allowed all to come through
 - her version used to just search for song title and year - not very accurate, but less problems 
+
+another example from song titles
+- 15 missing - all had (From some movie)
+- added split  on (, but needed to use a character escape \
+- only 3 missing
+
+artist titles and . inside them
+- replace('.', '') actually caused more songs to be missing
+- tried to catch edge cases, but seemed to be better to leave it in
+
+
 
 If you want to run the project yourself, you will need to make a `config.json` file with the following variables:
 
