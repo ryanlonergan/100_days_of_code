@@ -51,7 +51,7 @@ song_uris = []
 count = 0
 for ind, song in songs_df.iterrows():
     # Added some extra processing of the strings to allow for more tracks to be found
-    song_name = re.split('\(', song['Song'])
+    song_name = re.split(r'\(From', song['Song'])
     song_name = song_name[0].replace("'", "")
     # The search was very particular about the artist name and any song with features or similar needed to be split
     artist_name = re.split('Featuring|&| X | x | Duet ', song['Artist'])
@@ -63,7 +63,7 @@ for ind, song in songs_df.iterrows():
     except IndexError:
         print(f"{song['Song']} - {song['Artist']}")  # Use this line to figure out what tracks aren't being found
         count += 1
-print(f'{count} songs not on spotify')  # Gives an idea of how many songs are not available or had issues
+print(f'Songs not on Spotify or unable to find: {count}')  # Gives an idea of how many songs are not available or had issues
 
 # Playlist creation and adding songs
 playlist = sp.user_playlist_create(user=user_details['id'], name=f'{date} Billboard Top 100', public=False)
