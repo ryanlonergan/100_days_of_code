@@ -48,7 +48,10 @@ artist titles and . inside them
 - replace('.', '') actually caused more songs to be missing
 - tried to catch edge cases, but seemed to be better to leave it in
 
-
+Tried on my birthday
+- 5 songs missing
+- 3 were not on spotify at all
+- 2 were errors from Billboard
 
 If you want to run the project yourself, you will need to make a `config.json` file with the following variables:
 
