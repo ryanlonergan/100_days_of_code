@@ -30,6 +30,6 @@
 </tr>
 </table>
 
-Again, not an overly interesting day. Pacing is way off still in terms of time and difficulty with a large amount of time needed for very small challenges. However, it is building the foundation of CSS which will be needed later on which is something I keep on telling myself so I have more patience. Still, I am not looking forward to the almost 3 hours of videos to watch tomorrow which is still a huge time sink when I watch in double speed. Only 1 more day about web fundamentals left though...
+Again, not an overly interesting day. Pacing is way off still in terms of time and difficulty with a large amount of time needed for very small challenges. However, it is building the foundation of CSS which will be needed later on which is something I keep on telling myself so I have more patience. Still, I am not looking forward to the almost 3 hours of videos to watch tomorrow which is still a huge time sink when I watch at double speed. Only 1 more day about web fundamentals left though...
 
 <a href="https://ryanlonergan.github.io/portfolio/100_days/day_43_css_resume.html">Click here</a> to view the page on my personal website to see how the project looks.

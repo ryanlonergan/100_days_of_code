@@ -31,6 +31,6 @@
 
 </table>
 
-Overall, an easy day without much to talk about. I accidently deleted my project for the day when moving my folders around, so I just quickly remade the page and the following days for HTML/CSS return more to what the course wanted.
-  
+Overall, an easy day without much to talk about. I accidently deleted my project for the day when moving my folders around, so I just quickly remade the page and the following days for HTML/CSS to return more to what the course wanted.
+
 <a href="https://ryanlonergan.github.io/portfolio/100_days/day_41_html_personal_site.html">Click here</a> to view the page on my personal website to see how the project looks.

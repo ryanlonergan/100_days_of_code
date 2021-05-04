@@ -33,6 +33,6 @@
 </tr>
 </table>
 
-This was a really odd day for the course. It was very, very simple considering the previous lessons and I imagine it is because it comes from an early day from another course. Its not that the information is not useful, its just very easy and as it comes after the difficult capstone from days 39 and 40, the pacing seems way off. Its also kind of odd how she talks about using forms and how they are not too useful without JS, but the course will never cover that. Hopefully the course picks up again soon, but for the next two days, there are 4.5 hours of CSS videos to watch. Not really looking forward to that.
+This was a really odd day for the course. It was very, very simple considering the previous lessons and I imagine it is because it comes from an early day from another course. It's not that the information is not useful, but it is just very easy and as it comes after the difficult capstone from days 39 and 40, the pacing seems way off. It is also kind of odd how she talks about using forms and how they are not too useful without JS, but the course will never cover that. Hopefully the course picks up again soon, but for the next two days, there are 4.5 hours of CSS videos to watch. Not really looking forward to that.
 
 <a href="https://ryanlonergan.github.io/portfolio/100_days/day_42_html_resume.html">Click here</a> to view the page on my personal website to see how the project looks.
