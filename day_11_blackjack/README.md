@@ -29,8 +29,8 @@
 </tr>
 </table>
 
-This day was the first capstone for the course where instructions were more limited and basically all that was given were instructions and an art asset to print. It was more difficult by several orders of magnitude, but I liked it overall. It follows the basic rules of blackjack and is simple in construction, but the basis of the game is there and it can be made more complex easily by adding onto it. Some areas that could be improved include betting, keep score over games, adding other rules (splits, doubling, etc.) and drawing cards directly from several shuffled decks to better emulate a real experience.
+This day was the first capstone for the course where instructions were more limited and basically all that was given were instructions and an art asset to print. It was more difficult by several orders of magnitude, but I liked it overall. It follows the basic rules of blackjack and is simple in construction, but the basis of the game is there and it can be made more complex easily by adding onto it. Some areas that could be improved include betting, keeping score over games, adding other rules (splits, doubling, etc.) and drawing cards directly from several shuffled decks to better emulate a real experience.
 
-One note is that the project originally uses a clear function from the Replit library, but it does not really work outside their environment. I wanted to replace it with something else, but the correct way to do so differs by operating system. To get around this, I could have used some specific conditions that quickly got complex, but elected for the simpler option of printing a new line 100 times. 
+One note is that the project originally uses a clear function from the Replit library, but it does not really work outside their environment. I wanted to replace it with something else, but the correct way to do so differs by operating system. To get around this, I could have used some specific conditions that quickly got complex, but elected for the simpler option of printing a new line 100 times.
 
 <a href="https://replit.com/@ryanlonergan/blackjack-start">Click here</a> to view and play the project on Replit.

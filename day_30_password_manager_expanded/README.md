@@ -3,7 +3,7 @@
 <table border='0'>
 <tr>
   <td>
-  This project was an expansion from the previous day and added greater usability for the user. It changed how it stored security details from a plain text file to a json file for easier readability as everything is stored as name/value pair similar to a dictionary. It also added search functionality to retrieve password information and increased error and exception handling overall.
+  This project was an expansion from the previous day and added greater usability for the user. It changed how it stored security details from a plain text file to a json file for easier readability as everything is stored as a name/value pair similar to a dictionary. It also added search functionality to retrieve password information and increased error and exception handling overall.
   </td>
   <td>
     <div>

@@ -3,7 +3,7 @@
 <table border='0'>
 <tr>
   <td>
-  This project automatically sends out a randomized email message to anyone with a birthday on the day's date. It reads a csv file with a list of people, their birthdays and their emails and uses a condition to see if the current day is their birthday. It then chooses a random message from a list of templates, personalizes the message for the person and appends a random quote to the user's signature. Then, the message is emailed to the person and if the script is uploaded to an online Python environment (<a href="https://www.pythonanywhere.com/">PythonAnywhere</a>, <a href="https://aws.amazon.com/lambda/">AWS Lambda</a>, etc.), it can check for birthdays daily and the user never haves to worry about forgetting one again.
+  This project automatically sends out a randomized email message to anyone with a birthday on the day's date. It reads a csv file with a list of people, their birthdays and their emails and uses a condition to see if the current day is their birthday. It then chooses a random message from a list of templates, personalizes the message for the person and appends a random quote to the user's signature. Then, the message is emailed to the person and if the script is uploaded to an online Python environment (<a href="https://www.pythonanywhere.com/">PythonAnywhere</a>, <a href="https://aws.amazon.com/lambda/">AWS Lambda</a>, etc.), it can check for birthdays daily and the user never has to worry about forgetting one again.
   </td>
   <td>
     <div>
