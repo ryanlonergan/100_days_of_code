@@ -1,7 +1,6 @@
 import json
-import smtplib
-
 import requests
+import smtplib
 
 from bs4 import BeautifulSoup
 import lxml
