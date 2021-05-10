@@ -7,7 +7,7 @@ import lxml
 
 # Change this url to whatever item you want to track and the price you want the alert to trigger at
 url_to_track = 'https://www.amazon.com/Instant-Pot-Plus-Programmable-Sterilizer/dp/B08PQ2KWHS?ref_=ast_sto_dp&th=1'
-buy_price = 200  # Leave this high for testing
+buy_price = 200  # Leave this price high for testing
 
 # The headers may have to be changed to have Amazon not think you're a bot
 # These headers worked for me, but you may have to alter it - Use http://myhttpheader.com/ to see your headers
