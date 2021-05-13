@@ -1,16 +1,12 @@
-# This is a sample Python script.
+from selenium import webdriver
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+chrome_driver_path = r'C:\Users\rjl91\development\chromedriver.exe'
+driver = webdriver.Chrome(executable_path=chrome_driver_path)
 
+# testing Selenium - redo of day 47
+driver.get('https://www.amazon.com/Instant-Pot-Plus-Programmable-Sterilizer/dp/B08PQ2KWHS?ref_=ast_sto_dp&th=1')
+price = driver.find_element_by_id('priceblock_ourprice')
+print(price.text)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# driver.close()  # close tab
+driver.quit()  # quit window
