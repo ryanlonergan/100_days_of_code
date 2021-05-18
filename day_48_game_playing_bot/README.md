@@ -36,6 +36,7 @@ Any comments for the day. The following are templates for the `config.json` file
 https://orteil.dashnet.org/cookieclicker/
 https://www.selenium.dev/documentation/en/webdriver/
 https://chromedriver.chromium.org/downloads
+https://saucelabs.com/resources/articles/selenium-tips-css-selectors
 
 If you want to run the project yourself, you will need to make a `config.json` file with the following variables:
 
