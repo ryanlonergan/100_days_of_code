@@ -1,3 +1,7 @@
+"""
+Some useful examples how to code using Selenium for future reference
+"""
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
