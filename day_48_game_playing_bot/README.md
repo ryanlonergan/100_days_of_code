@@ -38,6 +38,11 @@ https://www.selenium.dev/documentation/en/webdriver/
 https://chromedriver.chromium.org/downloads
 https://saucelabs.com/resources/articles/selenium-tips-css-selectors
 
+totally different version of the game - this code was designed for v 2.031
+after five minutes, got to about 70 cookies per second
+
+clicks about 7-8 times per second, fix updated this to 18-19 per second
+
 If you want to run the project yourself, you will need to make a `config.json` file with the following variables:
 
     "variable"  # short description
