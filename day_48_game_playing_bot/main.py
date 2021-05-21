@@ -1,59 +1,49 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+import time
 
+# Create driver and get
 chrome_driver_path = r'C:\Users\rjl91\development\chromedriver.exe'
 driver = webdriver.Chrome(executable_path=chrome_driver_path)
-
 driver.get('https://orteil.dashnet.org/cookieclicker/')
 
+# Clicks accept cookies banner
+time.sleep(3)
+driver.find_element_by_css_selector('a.cc_btn_accept_all').click()
+
+# Get elements
 big_cookie = driver.find_element_by_id('bigCookie')
 
-product_names = [f'product{i}' for i in range(17, -1, -1)]  # alternatively products = products[::-1]
+# Adding too many elements slows the clicking significantly, revert to range(17, -1, -1) for all products
+product_names = [f'product{i}' for i in range(3, -1, -1)]  # alternatively products = products[::-1]
+product_elements = [driver.find_element_by_id(name) for name in product_names]
 
-# p0 = driver.find_element_by_xpath('//*[@id="product0"]')
-# print(p0.text)
+# Create a timers to check for upgrades and for stopping the game
+upgrade_time = time.time() + 7
+time_stop = time.time() + 300
 
-
-# for name in product_names:
-#     drivers = driver.find_element_by_id('name')
-#     print(drivers.text)
-# products = [driver.find_element_by_id('name') for name in product_names]
-
-# for product in products:
-#     print(product)
-
-while True:
+# Running the game
+while time.time() < time_stop:
     big_cookie.click()
 
-    # Todo add in timer - do this every 5 seconds
+    if time.time() < upgrade_time:
+        # Buy upgrades
+        try:
+            upgrade = driver.find_element_by_id('upgrade0')
+            if upgrade.get_attribute('class') == 'crate upgrade enabled':  # checks to see if purchasable
+                upgrade.click()
+        except:  # I don't like the bare except, but can't seem to get the error message to trigger the except otherwise
+            pass  # Continue stops the loop totally, but pass just moves on to the next section
 
+        # Buy products
+        for product in product_elements:
+            if product.get_attribute('class') == 'product unlocked enabled':  # checks to see if purchasable
+                product.click()
 
-    # todo move the product drivers to a list? maybe that would work better? - slows down because it the list each iteration, but never buys
-    for name in product_names:
-        product = driver.find_element_by_id(name)
-        if product.get_attribute('class') == 'product unlocked enabled':
-            product.click()
-        # except AttributeError:
-        #     print('uh oh')
-        #     continue
+        # Reset upgrade_time
+        upgrade_time = time.time() + 7
 
+# Output the number of cookies per second achieved
+cps = driver.find_element_by_xpath('//*[@id="cookies"]')
+print(cps.text)
 
-
-
-    # product1 = driver.find_element_by_id('product1')
-    # if product1.get_attribute('class') == 'product unlocked enabled':
-    #     product1.click()
-    # product = driver.find_element_by_id('product0')
-    # if product.get_attribute('class') == 'product unlocked enabled':
-    #     product.click()
-
-    # Buy upgrades
-    try:
-        upgrade = driver.find_element_by_id('upgrade0')
-        if upgrade.get_attribute('class') == 'crate upgrade enabled':
-            upgrade.click()
-    except:  # I don't like the bare except, but can't seem to get the error message to trigger the except otherwise
-        continue
-
-# todo annoying banner ad button - wait 3 seconds and click
-# <a href="#null" data-cc-event="click:dismiss" target="_blank" class="cc_btn cc_btn_accept_all">Got it!</a>
+driver.close()
