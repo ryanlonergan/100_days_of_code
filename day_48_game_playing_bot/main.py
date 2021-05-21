@@ -1,3 +1,13 @@
+"""
+This code was designed for v 2.031 of the game and may not work on future
+versions correctly.
+
+Also, note that the cookies per second differs and is hardware based, so
+performance changes when using different machines leaving benchmark comparisons
+as unreliable metrics when sharing code.
+"""
+
+
 from selenium import webdriver
 import time
 
@@ -14,6 +24,8 @@ driver.find_element_by_css_selector('a.cc_btn_accept_all').click()
 big_cookie = driver.find_element_by_id('bigCookie')
 
 # Adding too many elements slows the clicking significantly, revert to range(17, -1, -1) for all products
+# Decreasing the number of products to check improved my clicks from about 7-8 times per second
+# to 18-19 per second
 product_names = [f'product{i}' for i in range(3, -1, -1)]  # alternatively products = products[::-1]
 product_elements = [driver.find_element_by_id(name) for name in product_names]
 
