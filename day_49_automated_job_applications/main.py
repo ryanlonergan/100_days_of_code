@@ -49,3 +49,10 @@ driver.find_element_by_css_selector('button.jobs-save-button').click()
 time.sleep(2)
 driver.find_element_by_xpath('//*[text()="Unsave"]').click()  # For some reason //button did not work, but wildcard did
 # It is the same button, so I could have saved the element and clicked it twice, but I wanted to try different methods
+
+# todo go through list and click on each job
+    # todo save each job and print title, job, etc from postings
+
+# I probably need this
+# from selenium.common.exceptions import NoSuchElementException
+
