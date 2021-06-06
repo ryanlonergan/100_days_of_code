@@ -36,23 +36,30 @@ driver.find_element_by_xpath('//button[.="Sign in"]').click()
 # personal LinkedIn account. To still get the experience of using Selenium, I elected to get the list of jobs, print
 # the roles and positions and then saving and immediately unsaving the first job as a compromise.
 
-# Get job listings details
-listings = driver.find_elements_by_css_selector('ul.jobs-search-results__list li')
-# add a after li to just get the links
+# Get the job listings and click through them while performing actions
+listings = driver.find_elements_by_class_name('jobs-search-results__list-item')
+
 for listing in listings:
-    item = listing.text.splitlines()
-    if len(item) > 1:
-        print(f'Position: {item[0]} Company: {item[1]}')
+    # Click on each listing
+    listing.click()
+    # Extract and print position and company to console
+    position = driver.find_element_by_class_name('jobs-details-top-card__job-title').text
+    company = driver.find_element_by_class_name('jobs-details-top-card__company-url').text
+    print(f'Position: {position} Company: {company}')  # Cleaner to assign text to variables than to include in print
 
-# Save and unsave a job
-driver.find_element_by_css_selector('button.jobs-save-button').click()
-time.sleep(2)
-driver.find_element_by_xpath('//*[text()="Unsave"]').click()  # For some reason //button did not work, but wildcard did
-# It is the same button, so I could have saved the element and clicked it twice, but I wanted to try different methods
+    # Save and unsave each job
+    time.sleep(1)
+    driver.find_element_by_css_selector('button.jobs-save-button').click()
+    time.sleep(1)
+    driver.find_element_by_css_selector('button.jobs-save-button').click()
+    time.sleep(1)
+    # I had originally used the following function to click the unsave button, but it does not work for the list
+    # driver.find_element_by_xpath('//*[text()="Unsave"]').click()  # //button did not work, but wildcard did
 
-# todo go through list and click on each job
-    # todo save each job and print title, job, etc from postings
+    # Note - The sleep functions are very important as linkedin does not change the page immediately, but may not work
+    # later on or on every computer
+    # If you need to change the times for sleep, check the following page for any jobs it was unable to unsave
+    # https://www.linkedin.com/my-items/saved-jobs/
 
-# I probably need this
+# I ended up not needing to use any exceptions, but Selenium has its own which I wanted to make a note of
 # from selenium.common.exceptions import NoSuchElementException
-
